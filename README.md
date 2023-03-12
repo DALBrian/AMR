@@ -5,8 +5,10 @@ Automatic Mobile Robot with KUKA kr70 R2100 Robotic arm in Ubuntu 20.04 &amp; RO
 ###Fix XRDP(Remote Desktop Protocol) black screen after login ###
 My XRDP can be connected it only shown my mouse and black blackground, and the following steps are how to fix it.
 1. Creat another user
+2. 
   sudo adduser rdpadmin/any username you like/   
 2. Add new user to admin group
+3. 
   sudo usermod -aG sudo rdpadmin/the username above/
 3. Use the new user to login XRDP
 
@@ -15,12 +17,18 @@ My XRDP can be connected it only shown my mouse and black blackground, and the f
 3.2 If not, you may not in the same case as I did.
 
 4. Modify automatic login of the original user.
+5. 
   locate custom.conf
 5. Edit the custom.conf file
+6. 
   sudo vim /etc/gdm3/custon.conf
 6.Comment these three lines and save the file before exit
+
   #Enabling automatic login
+  
   #AutomaticLoginEnable = true
+  
   #AutomaticLogin myusername
+  
 7. Solved.
 
