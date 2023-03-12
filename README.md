@@ -9,8 +9,10 @@ My XRDP can be connected it only shown my mouse and black blackground, and the f
 2. Add new user to admin group
   sudo usermod -aG sudo rdpadmin/the username above/
 3. Use the new user to login XRDP
+
 3.1 If successful, only the new user can connect to XRDP successfully,follow the below steps.
 3.2 If not, you may not in the same case as I did.
+
 4. Modify automatic login of the original user.
   locate custom.conf
 5. Edit the custom.conf file
